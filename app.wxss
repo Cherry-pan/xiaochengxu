@@ -1,0 +1,18 @@
+.flex{
+  display: flex;
+}
+.ali-item{
+  align-items: center;
+}
+.jst-spac{
+  justify-content: space-between;
+}
+.jst-ceter{
+  justify-content: center;
+}
+.ali-center{
+  align-content: center;
+}
+.flex-end{
+  justify-content: flex-end;
+}

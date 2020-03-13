@@ -1,0 +1,3 @@
+<button bindtap="send">发送短信</button>
+<input bandinput = "setval"></input>
+<button bindtap="send">发送</button>

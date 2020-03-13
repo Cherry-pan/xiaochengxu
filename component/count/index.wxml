@@ -1,0 +1,5 @@
+<view class="right">
+  <view style="border: 2rpx solid {{color}};color: {{color}};" class="mus" bindtap="mus" data-id="{{item.id}}">-</view>
+  <input disabled="true" value="{{count}}"></input>
+  <view style="border: 2rpx solid {{color}}; background: {{color}};" class="plus" bindtap="plus" data-id="{{item.id}}">+</view>
+</view>

@@ -1,0 +1,43 @@
+<wxs src="../../utils/filter.wxs" module="filter" />
+<van-tabs class="fixed" color="#81a6d3" active="{{ active }}" bind:change="onChange">
+  <van-tab title="全部订单"></van-tab>
+  <van-tab title="立等可取"></van-tab>
+  <van-tab title="预约订单"></van-tab>
+</van-tabs>
+<view style="height:90rpx;"></view>
+<!-- <view wx:for="{{orderList}}" wx:key="name">
+  <van-cell title="{{item.shopname}}" value="已完成" size="small" />
+  <view class="flex jst-spac item">
+  <view class="flex jst-spac" style="flex-direction: column;">
+     <view class="title">{{item.id}}----{{item.goodsname}}   共{{item.count}}件商品</view>
+    <view class="time">{{item.createtime}}</view>
+  </view>
+   <view>￥{{item.price}}</view>
+  </view>
+</view> -->
+<view class="box" wx:for="{{orderList}}" wx:key="name">
+  <!-- 第一行 -->
+  <view class="flex jst-spac">
+    <view class="flex">
+      <view class="ziti">自提</view>
+      <view class="shopname">{{item.shopname}} (NO.{{item.id}})</view>
+    </view>
+    <view class="state">{{filter.ForMaState(item.state)}}</view>
+  </view>
+  <!-- 第二行 -->
+  <view class="flex jst-spac goods items ali-item">
+    <view class="flex">
+      <view class="goodsname">{{item.goodsname}}等</view>
+      <view class="count">共{{item.count}}件商品</view>
+    </view>
+    <view class="price1">￥ {{item.totalprice}}</view>
+  </view>
+  <!-- 第三行 -->
+  <view class="flex">
+    <view class="time">{{filter.orderTime(item.createtime)}}</view>
+  </view>
+  <view class="flex" style="justify-content: flex-end;">
+    <view class="again" wx:if="{{item.state===2}}" style=" border: 1px solid #f00;color:#f00">去支付</view>
+    <view class="again" wx:else>再来一单</view>
+  </view>
+</view>

@@ -1,0 +1,104 @@
+<view class="flex ali-item jst-spac">
+  <!-- 左边 -->
+  <view class="flex address ali-item">
+    <i-icon type="coordinates" size="20" color="#999" style="margin-right:10rpx" />
+    <view>
+      <view class="name">{{minShop.shopName}}</view>
+      <view class="distance">距您{{minShop.distance}}米</view>
+    </view>
+  </view>
+  <!-- 右边 -->
+  <view class="flex ali-item right1 jst-spac">
+    <view class="self">自提</view>
+    <view class="out">外送</view>
+  </view>
+</view>
+<image src="https://wx4.sinaimg.cn/mw690/006gk3OLly1g8dq6kxc3aj30ku06k43u.jpg"></image>
+<!-- 主体 -->
+<view class="main flex">
+  <scroll-view scroll-y="true" class="menu">
+    <!-- activeList记录触发事件的参数 -->
+    <view bindtap="active" data-index="{{index}}" wx:key="name" class="item {{item.id===activeList?'active':''}}" wx:for="{{menuList}}">{{item.goodsname}}</view>
+  </scroll-view>
+  <!-- 商品列表 -->
+  <!--使用 scroll-view属性，一定要给一定的高度才能生效 -->
+  <scroll-view scroll-y class="goodlist">
+    <!-- 头部 -->
+    <view class="flex ali-item header">
+      <view class="top">{{menuList[activeList-1].goodsname}}热卖</view>
+      <view class="line"></view>
+    </view>
+    <!-- 列表1 -->
+    <view class="item" style="margin:20rpx 0" wx:for="{{goodlist}}" wx:key="name">
+      <view class="left flex">
+        <!-- 图片 -->
+        <view class="pic">
+          <image src="{{item.img}}"></image>
+        </view>
+        <!-- 描述 -->
+        <view class="desc flex jst-spac" style="flex-direction: column;">
+          <view>
+            <view class="coff_name">
+              <!-- {{item.name}} -->
+              徐臻
+            </view>
+            <view class="enname">xuzhen</view>
+          </view>
+          <view class="price" style="font-size:24rpx">￥10</view>
+        </view>
+      </view>
+      <view data-id="{{item.id}}"  class="right" bindtap="showDetail">+</view>
+    </view>
+  </scroll-view>
+</view>
+
+<!--详情页  -->
+<scroll-view scroll-y class="detail {{isHidedetail?'':'active1'}}">
+  <view class="close flex ali-item jst-ceter" bindtap="close">x</view>
+  <image src="{{gooddetail.img}}"></image>
+  <!-- 商品详情 -->
+  <view class="main1">
+    <view class="latie">{{gooddetail.name}}</view>
+    <view class="enname">{{gooddetail.enname}}</view>
+    
+    <!-- 使用自定义组件 -->
+    <myComponents label="规格" items="{{guigeList}}" activeIndex="{{guigeListIndex}}" bind:change="changeguige"></myComponents>
+    <myComponents label="温度" items="{{wenduList}}" activeIndex="{{wenduListIndex}}" bind:change="changewendu"></myComponents>
+    <myComponents label="糖度" items="{{sweetList}}" activeIndex="{{sweetListIndex}}" bind:change="changetangdu"></myComponents>
+  </view>
+  <view style="height:10rpx;background:#F5F5F5;width:100vw;"></view>
+
+  <!-- 价格 -->
+  <view class="goods_detail">
+    <view class="goods_title">商品详情</view>
+    <view class="desc1">经典日式冲绳黑糖风味拿铁，黑糖与咖啡的美妙融合，香甜温暖、自然醇厚，口感绵长。 主要原材料:浓缩咖啡、牛奶、黑糖调味糖浆、原味调味糖浆、可选择添加搅打奶油(含香草风味糖浆) 图片仅供参考，请以实物为准，建议取餐后尽快饮用。
+    </view>
+  </view>
+
+  <!-- 定位 -->
+  <view class="flex ali-item" style=" padding: 40rpx;border-top:1px solid #ccc;position:relative;">
+    <view class="flex" style="flex-direction: column;">
+      <view style="font-weight:bold;">￥ {{gooddetail.price}}</view>
+      <view class="desc2">冲绳黑糖拿铁￥27+全糖￥0+默认奶油￥0</view>
+    </view>
+
+    <!-- <view class="flex right ali-item">
+      <view class="mus" bindtap="mus" data-id="{{item.id}}">-</view>
+      <input disabled="true" value="{{count}}"></input>
+      <view class="plus" bindtap="plus" data-id="{{item.id}}">+</view>
+    </view> -->
+    <count color="#81a6d3" bind:changeCount="changeCount" ></count>
+  </view>
+  <view style="height:100rpx;"></view>
+  <!-- 底部 -->
+  <view class="flex footer ali-item jst-spac {{isHidedetail?'none':''}}">
+    <!-- <view class="recharge flex ali-item jst-ceter">充10赠10</view> -->
+    <!-- <view class="buyNow flex ali-item jst-ceter" >立即购买</view> -->
+    <!-- <navigator url="../pay/index" class="buyNow flex ali-item jst-ceter" hover-class="none">立即购买</navigator> -->
+    <!-- <view class="buyNow flex ali-item jst-ceter" bindtap="buy">立即购买</view>
+    <view class="addCart flex ali-item jst-ceter">加入购物车</view> -->
+    <button class="recharge flex ali-item jst-ceter" style="border: none;border-radius:  0;border-right:1rpx solid #dcdcdc" >充10赠10</button>
+    <button class="buyNow flex ali-item jst-ceter" hover-class="none" bindtap="buy" style="border: none;border-radius:  0;">立即购买</button>
+    <button class="addCart flex ali-item jst-ceter" style="border: none;border-radius:  0;">加入购物车</button>
+  </view>
+</scroll-view>

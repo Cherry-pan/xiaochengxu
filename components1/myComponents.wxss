@@ -1,0 +1,30 @@
+.list {
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+  margin: 30rpx 0;
+}
+
+.list .items {
+  display: flex;
+  align-items: center;
+  font-size: 26rpx;
+}
+
+.list .items view {
+  width: 150rpx;
+  padding: 10rpx;
+  text-align: center;
+  margin: 0rpx 15rpx;
+  border-radius: 30rpx;
+  border: 1px solid #cec0b2;
+}
+
+.list .item1.active2 {
+  color: white;
+  background: #cec0b2;
+}
+
+.list .item1 {
+  color: #cec0b2;
+}

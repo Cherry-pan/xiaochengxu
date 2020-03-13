@@ -1,0 +1,40 @@
+/* pages/mine/index.wxss */
+
+.nickName {
+  margin-left: 20rpx;
+  font-size: 30rpx;
+}
+
+.kuang {
+  width: 100vw;
+}
+
+.xian {
+  display: flex;
+  width: 90vw;
+  border-radius: 5rpx;
+  margin: 30rpx auto;
+  border: 1px solid #ccc;
+}
+
+.kuang .xian .money {
+  padding: 30rpx;
+}
+
+.kuang .xian .money .lessmoney {
+  width: 100rpx;
+  height: 50rpx;
+  text-align: center;
+}
+
+.kuang .xian .money .hot {
+  font-weight: normal;
+  font-size: 28rpx;
+  color: #999;
+}
+.footer{
+  position: absolute;
+  bottom: -180rpx;
+  left: 50rpx;
+  border-radius: 5rpx;
+}

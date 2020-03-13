@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "count": "../../component/count/index"
+  },
+  "navigationBarTitleText": "购物车"
+}

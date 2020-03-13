@@ -1,0 +1,31 @@
+.right{
+  display: flex;
+  position: absolute;
+  right: 30rpx;
+}
+
+.right .mus {
+  width: 40rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  border-radius: 50%;
+  text-align: center;
+  /* border: 2rpx solid #81a6d3;
+  color: #81a6d3; */
+}
+
+.right .plus {
+  /* background: #81a6d3; */
+  width: 40rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  border-radius: 50%;
+  text-align: center;
+  /* border: 2rpx solid #81a6d3; */
+  color: white;
+}
+
+.right input {
+  width: 60rpx;
+  text-align: center;
+}

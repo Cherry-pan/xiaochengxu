@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "i-icon": "../../components/dist/icon/index",
+    "myComponents":"../../components1/myComponents",
+    "count":"../../component/count/index"
+  },
+  "navigationBarTitleText": "luckin coffee"
+}

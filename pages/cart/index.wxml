@@ -1,0 +1,30 @@
+<view class="container">
+  <view class="item flex ali-item" wx:for="{{goodList}}" wx:key="name">
+    <!-- 图 标 -->
+    <view class="group">
+      <block>
+        <icon type="success" size="20" bindtap="select" data-id="{{item.id}}" color="{{item.isSelect?'#81a6d3':'#ccc'}}"/>
+      </block>
+    </view>
+    <!-- middle -->
+    <view class="middle">
+      <view class="title">{{item.name}}</view>
+      <view class="desc">{{item.desc}}</view>
+      <view class="price">价格：{{item.price}}</view>
+    </view>
+    <count color="#81a6d3" count="{{item.count}}" bind:changeCount="changing" data-id="{{item.id}}"></count>
+  </view>
+
+  
+</view>
+<view class="footbar flex ali-item jst-spac">
+   <!-- 图标 -->
+    <view class="group flex">
+      <block>
+        <icon type="success" size="20" color="{{isSelectAll?'#81a6d3':'#ccc'}}" bindtap="selectAll"/>
+        <view class="selectAll">全选</view>
+      </block>
+    </view>
+    <view class="priceAll">￥{{totalMoney}}</view>
+    <view class="all flex ali-item jst-ceter">去结算</view>
+</view>

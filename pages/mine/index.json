@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "i-avatar": "../../components/dist/avatar/index",
+    "i-cell-group": "../../components/dist/cell-group/index",
+    "i-cell": "../../components/dist/cell/index",
+    "i-icon": "../../components/dist/icon/index"
+  },
+  "navigationBarTitleText": "个人中心"
+}

@@ -1,0 +1,6 @@
+<view class="list">
+  <view style="margin-right:5rpx;">{{label}}</view>
+  <view class="items">
+    <view class="item1 {{inActive ===index?'active2':''}}" wx:for="{{items}}" wx:key="name" data-index="{{index}}" bindtap="activeGG">{{item}}</view>
+  </view>
+</view>

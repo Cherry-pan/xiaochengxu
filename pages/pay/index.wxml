@@ -1,0 +1,145 @@
+<view class="bg">
+  <view class="title">立即自取 约18：56可取</view>
+
+  <!-- 自提门店 -->
+  <view class="bg1 flex">
+    <view class="left">
+      <view class="shop_self">自提门店</view>
+      <view class="shopid">南京科技金融大厦店(NO.1755)</view>
+      <view class="shopaddress">雨花台区安德门大街21号江苏科技金融大厦谢湾108号</view>
+    </view>
+    <view class="flex ali-item right1 jst-spac">
+      <view class="self">自提</view>
+      <view class="out">外送</view>
+    </view>
+  </view>
+
+  <!-- 商品详情 -->
+  <view class="seconded">
+    <view class="flex" style="padding-bottom:30rpx;">
+      <view class="">
+        <view class="chongsheng">{{goodsinfo.goodname}}</view>
+        <view class="kougan">{{goodsinfo.guige}}/{{goodsinfo.wendu}}/{{goodsinfo.sweet}}</view>
+      </view>
+      <view class="num">x1</view>
+      <view class="price">￥27</view>
+    </view>
+    <view class="flex flex-end total" style="padding-top:30rpx;">
+      <view>合计</view>
+      <view class="totalAll">￥ 27</view>
+    </view>
+  </view>
+
+  <!-- 推荐搭配 -->
+  <view class="third">
+    <view class="match">推荐搭配</view>
+    <view class="item flex">
+      <image src="http://img3.imgtn.bdimg.com/it/u=1880668406,3244100417&fm=26&gp=0.jpg"></image>
+      <view class="m_left">
+        <view class="desc">超过9501人也买了经典有机甘栗仁，快来尝尝吧~</view>
+        <view class="flex shouji">
+          <view class="new">￥9.9</view>
+          <view class="old">￥15</view>
+          <view class="add">+</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 咖啡钱包 -->
+  <view class="coffee_box">
+    <!-- 充值 -->
+    <view class="usecoffee flex ali-item jst-spac">
+      <view class="flex ali-item">
+        用咖啡钱包
+        <view class="two_one"> 充2赠1</view>，所有饮品
+        <view class="six"> 6.6折</view>
+      </view>
+      <view class="iconfont icondibudaohanglan- arrow"></view>
+    </view>
+  </view>
+
+  <!-- 使用优惠券 -->
+  <view class="coupon flex jst-spac">
+    <view class="use_coupon">使用优惠券</view>
+    <view class="flex ali-item">
+      <view class="two_eight">[2.8折大师咖啡-￥19.44]</view>
+      <view class="iconfont icondibudaohanglan- arrow1"></view>
+    </view>
+  </view>
+
+  <view class="line"></view>
+
+  <!-- 支付方式 -->
+  <view class="coupon flex jst-spac">
+    <view class="use_coupon">支付方式</view>
+    <view class="flex ali-item ali-center">
+      <view class="group">
+        <block>
+          <icon type="success" size="20" bindtap="select" />
+        </block>
+      </view>
+      <view class="wpay">微信支付</view>
+      <view class="iconfont icondibudaohanglan- arrow1"></view>
+    </view>
+  </view>
+</view>
+
+
+<!-- 自取方式 -->
+<view class="flex helpyouself jst-spac">
+  <view style="  font-size: 30rpx;">自取方式</view>
+  <view class="flex ali-item">
+    <view class="group">
+      <block>
+        <icon type="success" size="20" bindtap="select" color="#9EBDDD" />
+      </block>
+    </view>
+    <view class="saty">店内用餐</view>
+  </view>
+  <view class="flex ">
+    <view class="group1">
+
+    </view>
+    <view class="daizou">自提带走</view>
+  </view>
+
+</view>
+<view class="line"></view>
+
+<!-- 特殊需求 -->
+<view class="flex special jst-spac">
+  <view>特殊备注要求</view>
+  <view class="iconfont icondibudaohanglan- arrow1"></view>
+</view>
+
+<!-- 协议 -->
+<view class="xieyi">
+  <view class="flex ali-item">
+    <view class="group">
+      <block>
+        <icon type="success" size="20" bindtap="select" color="#9EBDDD" />
+      </block>
+    </view>
+    <view class="argee">我已阅读并同意《支付协议》</view>
+  </view>
+
+  <view class="tips">
+    温馨提示：仅支持开具电子发票，订单完成后可前往发票管理中心开具
+  </view>
+</view>
+
+<!-- 底部 -->
+<view class="flex footer ali-item jst-spac">
+  <view class="gopay">
+    <view class="flex ali-item">
+      <view class="need">还需支付</view>
+      <view class="shiji">￥7.56</view>
+    </view>
+
+    <view class="dikou">已抵扣￥19.44</view>
+  </view>
+
+  <view class="addCart flex ali-item jst-ceter" bindtap="buy">去支付</view>
+  <!-- <button class="addCart flex ali-item jst-ceter" bindtap="buy">去支付</button> -->
+</view>

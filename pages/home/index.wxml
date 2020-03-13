@@ -1,0 +1,38 @@
+<swiper indicator-dots="{{true}}" indicator-color="rgba(255, 255, 255, 0.5)" indicator-active-color="#fff" autoplay="atuo" interval="2000" circular="{{true}}">
+  <swiper-item>
+    <image mode="" src="https://wx2.sinaimg.cn/large/006VJ4P6gy1g34lg9ni7zj30fk078wgi.jpg"></image>
+  </swiper-item>
+  <swiper-item>
+    <image mode="" src="https://wx1.sinaimg.cn/large/006VJ4P6ly1g1bu35nxf6j30fk078ju3.jpg"></image>
+  </swiper-item>
+  <swiper-item>
+    <image mode="" src="https://wx2.sinaimg.cn/large/006VJ4P6ly1fy1ijsky48j30fk078tb7.jpg"></image>
+  </swiper-item>
+</swiper>
+<!-- 主要内容 -->
+<!-- 列表 -->
+<i-cell-group>
+  <i-cell title="现在下单" label="ORDER NOW">
+    <i-icon type="keyboard" size="22" color="#80848f" slot="footer" />
+  </i-cell>
+  <i-cell title="咖啡钱包" label="COFFEE WALLET" bind:click="click">
+    <i-icon type="coupons" size="22" color="#80848f" slot="footer" />
+  </i-cell>
+  <i-cell title="瑞幸潮品" label="LUCKYIN POP">
+    <i-icon type="collection" size="22" color="#80848f" slot="footer" />
+  </i-cell>
+  <i-cell title="送他咖啡" label="SEND COFFEE">
+    <i-icon type="commodity" size="22" color="#80848f" slot="footer" />
+  </i-cell>
+</i-cell-group>
+<view style="overflow:hidden">
+  <image mode="aspectFit" style=" border-radius: 10rpx" src="https://wx4.sinaimg.cn/crop.0.0.920.300/006VJ4P6ly1g8da1oa7grj30pk08c0xx.jpg" class="footer"></image>
+</view>
+
+<!-- 弹层 -->
+<view class="shadow" wx:if="{{showadv}}" catchtouchmove="nomove">
+  <view class="close flex ali-item jst-ceter" bindtap="close">x</view>
+  <navigator url="../activity/index" hover-class="none">
+    <image class="tanceng" src="https://wx1.sinaimg.cn/thumb150/006VJ4P6ly1g8f4dckujyj30lr0wc7ep.jpg"></image>
+  </navigator>
+</view>

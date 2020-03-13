@@ -1,0 +1,29 @@
+function ForMaState(state) {
+  switch (state) {
+    case 0:
+      return "已取消";
+    case 1:
+      return "已完成";
+    case 2:
+      return "待支付";
+  }
+}
+
+function orderTime(createtime) {
+  // console.log(createtime)
+  var date = getDate(createtime); //返回当前时间对象
+  // console.log(date)
+  // date.setHours(date.getHours()-8) //设置小时，小时-8
+  var str1 = [date.getFullYear(), expaire0(date.getMonth() + 1), expaire0(date.getDate())].join('-')
+  var str2 = [expaire0(date.getUTCHours()), expaire0(date.getUTCMinutes())].join(':')
+  return str1 + " " + str2
+}
+
+function expaire0(val) {
+  return val < 10 ? "0" + val : val
+}
+module.exports = {
+  ForMaState: ForMaState,
+  orderTime: orderTime,
+  expaire0: expaire0
+};

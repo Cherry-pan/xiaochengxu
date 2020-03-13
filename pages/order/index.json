@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "van-tab": "../../components/vant-weapp/tab/index",
+    "van-tabs": "../../components/vant-weapp/tabs/index",
+    "van-cell": "../../components//vant-weapp/cell/index",
+    "van-cell-group": "../../components//vant-weapp/cell-group/index"
+  },
+  "navigationBarTitleText": "我的订单",
+  "enablePullDownRefresh": true,
+  "backgroundColor": "#eee"
+}

@@ -1,0 +1,294 @@
+/* pages/menu/index.wxss */
+
+page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.address {
+  padding: 20rpx;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 28rpx;
+}
+
+.distance {
+  font-size: 24rpx;
+  color: #999;
+  margin-top: 10rpx;
+}
+
+.right1 {
+  font-size: 28rpx;
+  border: 4rpx solid #81a6d3;
+  height: 70rpx;
+  width: 180rpx;
+  margin-right: 20rpx;
+  border-radius: 48rpx;
+}
+
+.right1 .self {
+  background: #81a6d3;
+  color: white;
+  height: 65rpx;
+  display: flex;
+  width: 90rpx;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50rpx;
+  margin: 5rpx;
+}
+
+.right1 .out {
+  color: #81a6d3;
+  display: flex;
+  width: 90rpx;
+  justify-content: center;
+}
+
+image {
+  height: 250rpx;
+  width: 100vw;
+}
+
+/* 主体 */
+
+.main {
+  width: 100vw;
+  flex: 1;
+  height: 100%;
+}
+
+.menu {
+  width: 200rpx;
+  background: #f6f6f6;
+  text-align: center;
+}
+
+.menu .item {
+  padding: 20rpx;
+  color: #a7a7a7;
+  border-left: 8rpx solid transparent;
+  font-size: 28rpx;
+}
+
+.goodlist {
+  background: #fff;
+  flex: 1;
+}
+
+.menu .active {
+  background: white;
+  color: #000;
+  border-left: 8rpx solid #81a6d3;
+}
+
+.header {
+  height: 80rpx;
+}
+
+.top {
+  font-size: 28rpx;
+  padding: 0 20rpx;
+}
+
+.line {
+  border: 2rpx solid #f1f1f1;
+  flex: 1;
+}
+
+.goodlist {
+  height: 100%;
+}
+
+.goodlist .item {
+  position: relative;
+}
+
+.goodlist .pic {
+  overflow: hidden;
+  width: 150rpx;
+  height: 150rpx;
+  padding: 0 20rpx;
+}
+
+.goodlist .pic image {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 5rpx;
+}
+
+.goodlist .item .coff_name {
+  font-size: 28rpx;
+}
+
+.goodlist .item .enname {
+  color: #ccc;
+  font-size: 24rpx;
+}
+
+.goodlist .item .desc {
+  flex: 1;
+}
+
+.goodlist .right {
+  background: #81a6d3;
+  width: 40rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  border-radius: 50%;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  right: 10rpx;
+  bottom: 10rpx;
+}
+
+.detail {
+  height: 100vh;
+  width: 100vw;
+  background: white;
+  position: absolute;
+  top: -200vh;
+  left: 0;
+  transition: 1s;
+  z-index: 9999;
+}
+
+.active1 {
+  top: 0;
+  background: white;
+}
+
+.close {
+  position: absolute;
+  top: 5vh;
+  left: 3vh;
+  color: white;
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  font-size: 22rpx;
+  line-height: 100rpx;
+  border: 1px solid white;
+}
+
+.detail image {
+  height: 500rpx;
+}
+
+/* 商品详情 */
+
+.main1, .goods_detail {
+  padding: 40rpx;
+  background: white;
+}
+
+.latie {
+  font-size: 34rpx;
+  font-weight: bold;
+  font-family: "苹方";
+}
+
+.enname {
+  color: #666;
+  font-size: 28rpx;
+  margin: 20rpx 0;
+}
+
+.big {
+  width: 180rpx;
+  height: 70rpx;
+  background: #cec1b3;
+  color: white;
+  border-radius: 40rpx;
+  text-align: center;
+  line-height: 70rpx;
+  font-size: 28rpx;
+  margin-left: 30rpx;
+}
+
+.guige {
+  font-size: 28rpx;
+  color: #666;
+}
+
+.size {
+  margin: 30rpx 0;
+}
+
+.ice {
+  border: 1px solid #cec1b3;
+  color: #cec1b3;
+  background: white;
+}
+
+.goods_title {
+  font-weight: bold;
+  margin-bottom: 30rpx;
+}
+
+.desc1 {
+  color: #6f6f6f;
+  font-size: 28rpx;
+  line-height: 50rpx;
+}
+
+.desc2 {
+  font-size: 24rpx;
+  color: #666;
+  /* padding: 0rpx 20px; */
+}
+
+/* footetbar */
+
+.footer {
+  height: 100rpx;
+  background: #f7f7f6;
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.footer button{
+  font-size: 28rpx;
+}
+.recharge {
+  color: #e06e11;
+  border-right: 1px solid #dcdcdc;
+  width: 33.3%;
+   /* height: 100%; */
+}
+.recharge::after{
+   border: none;
+    border-radius:  0;
+}
+.buyNow {
+  width: 33.3%;
+  color: #81a6d3;  
+   height: 100%;
+}
+.buyNow::after{
+  border: none;
+   border-radius:  0;
+}
+.addCart {
+  background: #81a6d3;
+  color: white;
+  height: 100%;
+  /* width: 250rpx; */
+  width: 33.3%;
+
+}
+.addCart::after{
+   border: none;
+    border-radius:  0;
+}
+.none{
+  display: none;
+}

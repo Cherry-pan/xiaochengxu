@@ -1,0 +1,66 @@
+{
+  "pages": [
+    "pages/home/index",
+    "pages/menu/index",
+    "pages/mine/index",
+    "pages/cart/index",
+    "pages/activity/index",
+    "pages/order/index",
+    "pages/pay/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#81a6d3",
+    "navigationBarTitleText": "luckin coffee",
+    "navigationBarTextStyle": "white",
+    "onReachBottomDistance": 100
+  },
+  "tabBar": {
+    "color": "#333333",
+    "selectedColor": "#81a6d3",
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "text": "首页",
+        "iconPath": "/assistant/img/home-1.png",
+        "selectedIconPath": "/assistant/img/home.png"
+      },
+      {
+        "pagePath": "pages/menu/index",
+        "text": "菜单",
+        "iconPath": "/assistant/img/menu.png",
+        "selectedIconPath": "/assistant/img/menu-1.png"
+      },
+      {
+        "pagePath": "pages/order/index",
+        "text": "订单",
+        "iconPath": "/assistant/img/order-1.png",
+        "selectedIconPath": "/assistant/img/order.png"
+      },
+      {
+        "pagePath": "pages/cart/index",
+        "text": "购物车",
+        "iconPath": "/assistant/img/cart.png",
+        "selectedIconPath": "/assistant/img/cart-1.png"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "text": "我的",
+        "iconPath": "/assistant/img/mine.png",
+        "selectedIconPath": "/assistant/img/mine-1.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap45.json",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "位置将由小程序的接口展示"
+    }
+  },
+  "networkTimeout": {
+    "request": 20000,
+    "connectSocket": 20000,
+    "uploadFile": 20000,
+    "downloadFile": 20000
+  }
+}
